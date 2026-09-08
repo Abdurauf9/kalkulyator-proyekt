@@ -1,0 +1,86 @@
+:root {
+  --bg: #1e1f26;
+  --calc-bg: #2a2d37;
+  --key-bg: #363a45;
+  --key-op: #f5a623;
+  --key-func: #4a4e5a;
+  --text: #ffffff;
+  --text-dim: #9aa0ab;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, system-ui, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  padding: 16px;
+}
+
+.calculator {
+  width: 100%;
+  max-width: 340px;
+  background: var(--calc-bg);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.display {
+  text-align: right;
+  padding: 16px 12px;
+  margin-bottom: 16px;
+  min-height: 96px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 4px;
+  overflow: hidden;
+}
+
+.display__history {
+  color: var(--text-dim);
+  font-size: 18px;
+  min-height: 22px;
+  word-break: break-all;
+}
+
+.display__current {
+  color: var(--text);
+  font-size: 40px;
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.key {
+  border: none;
+  border-radius: 14px;
+  padding: 18px 0;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--text);
+  background: var(--key-bg);
+  cursor: pointer;
+  transition: filter 0.15s, transform 0.05s;
+}
+
+.key:hover { filter: brightness(1.15); }
+.key:active { transform: scale(0.95); }
+
+.key--op { background: var(--key-op); color: #1e1f26; }
+.key--func { background: var(--key-func); }
+.key--equals { background: var(--key-op); color: #1e1f26; }
+.key--zero { grid-column: span 1; }

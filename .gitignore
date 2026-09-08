@@ -1,0 +1,13 @@
+# OS fayllari
+.DS_Store
+Thumbs.db
+
+# Muharrir sozlamalari
+.vscode/
+.idea/
+
+# Loglar
+*.log
+
+# Node (agar keyinchalik kerak bo'lsa)
+node_modules/
