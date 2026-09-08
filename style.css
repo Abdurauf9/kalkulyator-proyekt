@@ -2,7 +2,7 @@
   --bg: #1e1f26;
   --calc-bg: #2a2d37;
   --key-bg: #363a45;
-  --key-op: #f5a623;
+  --key-op: #4f8cff;
   --key-func: #4a4e5a;
   --text: #ffffff;
   --text-dim: #9aa0ab;
@@ -80,7 +80,7 @@ body {
 .key:hover { filter: brightness(1.15); }
 .key:active { transform: scale(0.95); }
 
-.key--op { background: var(--key-op); color: #1e1f26; }
+.key--op { background: var(--key-op); color: #ffffff; }
 .key--func { background: var(--key-func); }
-.key--equals { background: var(--key-op); color: #1e1f26; }
+.key--equals { background: var(--key-op); color: #ffffff; }
 .key--zero { grid-column: span 1; }
